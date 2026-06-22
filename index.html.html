@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remilia Logistics | Zero Latency</title>
+    <style>
+        /* Apple-inspired minimalist styles */
+        :root {
+            --bg-color: #000000;
+            --text-main: #f5f5f7;
+            --text-muted: #86868b;
+            --accent: #2997ff;
+            --nav-bg: rgba(0, 0, 0, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+        }
+
+        /* Frosted Glass Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            background: var(--nav-bg);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* Section Formatting */
+        section {
+            padding: 120px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-header {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-sub {
+            font-size: 24px;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Image Grids */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                text-align: left;
+            }
+            .feature-grid.reverse {
+                direction: rtl;
+            }
+            .feature-grid.reverse > div {
+                direction: ltr;
+            }
+        }
+
+        .feature-text h3 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-text p {
+            font-size: 21px;
+            color: var(--text-muted);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(255,255,255,0.05);
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 80px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#latency">Latency</a></li>
+            <li><a href="#humanity">Humanity</a></li>
+            <li><a href="#talent">Talent</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Remilia Logistics.</h1>
+        <h2>Moving the world. At zero latency.</h2>
+    </div>
+
+    <section id="latency">
+        <h2 class="section-header">Ultra-Low Latency.</h2>
+        <p class="section-sub">Physical distance is a bug. We are the patch. Our aerospace network ensures packages arrive before the world realizes they left.</p>
+        
+        <div class="feature-grid">
+            <div class="feature-text">
+                <h3>Speed, redefined.</h3>
+                <p>By streamlining customs, airspace optimization, and automated sorting, we have reduced international transit times to absolute theoretical minimums.</p>
+            </div>
+            <div>
+                <img src="http://readyfortakeoffbook.com/cdn/shop/articles/image-hero-Boeing-757-200-PF.webp?v=1773991185&width=2048" alt="Sleek cargo plane landing at sunset">
+            </div>
+        </div>
+    </section>
+
+    <section id="humanity">
+        <div class="feature-grid reverse">
+            <div class="feature-text">
+                <h3>Routing out hunger.</h3>
+                <p>A logistic network powerful enough to deliver consumer goods instantly is powerful enough to redistribute global food surpluses. We are engineering the end of world hunger, one node at a time.</p>
+            </div>
+            <div>
+                <img src="https://media.istockphoto.com/id/597938858/vector/abstract-world-map-digital-texture-pattern-technology-innovation-concept-background.jpg?s=612x612&w=0&k=20&c=QUcf0CU0ufpkb3-F5NfHvttj6SgWL7LErN1HH2Tw_AM=" alt="Abstract glowing global logistics network">
+            </div>
+        </div>
+    </section>
+
+    <section id="talent">
+        <h2 class="section-header">Human Capital.</h2>
+        <p class="section-sub">The most valuable cargo isn't in a box. It's potential.</p>
+        
+        <div class="feature-grid">
+            <div class="feature-text">
+                <h3>Importing brilliance.</h3>
+                <p>We facilitate the seamless international relocation of highly valuable workers. From visas to housing, we move minds to where they can change the world the fastest.</p>
+            </div>
+            <div>
+                <img src="https://gstatic1.promeai.pro/gallery/publish/2024/11/01/8624cf66470f41599fa425ad8062428e.jpg" alt="Sleek modern high-tech architecture">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Remilia Logistics. All rights reserved. Designed for the future.</p>
+    </footer>
+
+</body>
+</html>
